@@ -1,6 +1,9 @@
-import {Screen, View, Text} from '../../components';
-import {TouchableOpacity} from 'react-native';
+import {View} from '../../components/View';
+import {Text} from '../../components/Text';
+import {Dimensions, TouchableOpacity} from 'react-native';
 import RNRestart from 'react-native-restart';
+
+const {height, width} = Dimensions.get('window');
 
 export const ErrorFallback = ({resetBoundary}: any) => {
 	const reset = () => {
@@ -9,11 +12,11 @@ export const ErrorFallback = ({resetBoundary}: any) => {
 	};
 
 	return (
-		<Screen>
+		<View height={height} width={width}>
 			<Text>Error</Text>
 			<TouchableOpacity onPress={() => reset()}>
 				<Text>Reload</Text>
 			</TouchableOpacity>
-		</Screen>
+		</View>
 	);
 };

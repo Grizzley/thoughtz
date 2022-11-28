@@ -23,7 +23,9 @@ const BaseTheme = {
 
 const theme = createTheme({
 	...BaseTheme,
-	textVariants: {},
+	textVariants: {
+		defaults: {},
+	},
 	buttonVariants: {},
 	navigation: {
 		dark: false,
@@ -33,7 +35,9 @@ const theme = createTheme({
 
 const darkTheme = createTheme({
 	...BaseTheme,
-	textVariants: {},
+	textVariants: {
+		defaults: {},
+	},
 	buttonVariants: {},
 	navigation: {
 		dark: true,
